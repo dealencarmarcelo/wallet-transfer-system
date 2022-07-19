@@ -5,8 +5,8 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :email, index: true, unique: true
       t.string :document, index: true, unique: true
       t.integer :document_type, default: 0
-      t.string :first_name, null: false
-      t.string :last_name, null: false
+      t.string :first_name
+      t.string :last_name
       t.string :password_digest
       t.boolean :active, default: true
       t.boolean :blocked, default: false
